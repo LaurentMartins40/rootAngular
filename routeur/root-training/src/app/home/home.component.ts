@@ -14,6 +14,9 @@ export class HomeComponent implements OnInit {
     this.router.navigate([PATH_DETAIL,idDetail]);
   }
   ngOnInit() {
+    this.router.events.subscribe((event) => {
+      console.log('EVENTS', event);
+      })
   }
 
 }
